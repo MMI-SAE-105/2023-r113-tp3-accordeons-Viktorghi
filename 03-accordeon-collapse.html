@@ -5,29 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon avec x-collapse</title>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-  </head>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    </head>
   <body>
     <h1>Accordéon avec <code>x-collapse</code></h1>
     <div class="accordeon" x-data="{isOpen: 1}">
       <section>
         <button @click="isOpen = 1">bouton 1</button>
-        <p x-show="isOpen === 1" x-transition.scale.origin.top>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum
+        <p x-show="isOpen === 1" x-collapse>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum
           ad
           animi deleniti veritatis? Corporis iste consequatur impedit aperiam quis nesciunt odio quam deleniti? Veritatis
           unde nisi provident odio. Commodi, odit!</p>
       </section>
       <section>
         <button @click="isOpen = 2">bouton 2</button>
-        <p x-show="isOpen === 2" x-transition.scale.origin.top>A possimus fugit error tempore est, labore libero. Soluta
+        <p x-show="isOpen === 2" x-collapse>A possimus fugit error tempore est, labore libero. Soluta
           consequatur
           blanditiis, accusantium aliquid exercitationem amet quasi! Explicabo beatae blanditiis fugit similique alias
           dolorum maiores eaque, neque vel. Reprehenderit, debitis eum?</p>
       </section>
       <section>
         <button @click="isOpen = 3">bouton 3</button>
-        <p x-show="isOpen === 3" x-transition.scale.origin.top>Corrupti dicta rerum quasi in illo. Quas expedita eos
+        <p x-show="isOpen === 3" x-collapse>Corrupti dicta rerum quasi in illo. Quas expedita eos
           ab esse perferendis, id quis exercitationem optio dolorum! Aliquid, doloremque deleniti rerum itaque eos animi
           voluptates cum sequi possimus quas dolor.</p>
       </section>
