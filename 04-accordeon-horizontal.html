@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Accordéon horizontal</title>
-
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
       #accordeon {
         /* pour que les éléments soient alignés horizontalement */
@@ -72,17 +71,17 @@
   </head>
   <body>
     <h1>Accordéon horizontal</h1>
-    <ul id="accordeon">
-      <li>
+    <ul id="accordeon" x-data="{isOpen: 1}">
+      <li @click="isOpen = 1" :class="{actif:isOpen === 1,}">
         <figure>
           <img src="https://picsum.photos/100?random=1" alt="" width="102">
-          <figcaption>
+          <figcaption >
             <h3>Lorem, ipsum dolor.</h3>
             <p>Lorem ipsum dolor sit amet consectetur.</p>
           </figcaption>
         </figure>
       </li>
-      <li class="actif">
+      <li @click="isOpen = 2" :class="{actif:isOpen === 2,}">
         <figure>
           <img src="https://picsum.photos/100?random=2" alt="" width="102">
           <figcaption>
@@ -91,7 +90,7 @@
           </figcaption>
         </figure>
       </li>
-      <li>
+      <li @click="isOpen = 3" :class="{actif:isOpen === 3,}">
         <figure>
           <img src="https://picsum.photos/100?random=3" alt="" width="102">
           <figcaption>
