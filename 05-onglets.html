@@ -12,19 +12,22 @@
         width: 100%;
         height: 400px;
       }
+      #parentPanel {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
     </style>
   </head>
   <body>
     <h1>Onglets</h1>
-    <div id="onglets" x-data="{
-     ouvert : 1,
-    }">
+    <div id="onglets" x-data="{ouvert : 1,}">
     <ul role="tablist">
       <li role="tab" class="actif">Onglet 1</li>
       <li role="tab">Onglet 2</li>
       <li role="tab">Onglet 3</li>
     </ul>
-    <div>
+    <div id="parentPannel">
       <div role="tabpanel" :class="{actif:ouvert === 1,}">
         <h1>Panneau 1</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio obcaecati, cumque error aut neque in sequi, reprehenderit non aspernatur voluptates porro suscipit maxime quisquam eum consectetur placeat ipsum animi odit.</p>
